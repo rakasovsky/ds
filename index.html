@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" s>
+</head>
+<body>
+<div class="ds_container">
+    <div class="left_description">
+        <div class="item_desc gauntlets_desc">
+            <img src="firelink_gauntlets.png">
+        </div>
+        <div class="item_desc pants_desc">
+            <img src="firelink_leggings.png">
+        </div>
+    </div>
+    <div class="armor_wrapper">
+        <div class="armor_items">
+            <div class="item_container">
+                <div class="item_icon helm">
+
+                </div>
+            </div>
+            <div class="item_container">
+                <div class="item_icon breast">
+                    
+                </div>
+            </div>
+            <div class="item_container">
+                <div class="item_icon gauntlets">
+
+                </div>
+            </div>
+            <div class="item_container">
+                <div class="item_icon pants">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_description">
+        <div class="item_desc helm_desc">
+            <img src="firelink_helm.png">
+        </div>
+        <div class="item_desc breast_desc">
+            <img src="firelink_armor.png">
+        </div>
+    </div>
+</div>
+
+<script>
+    const itemIcons = document.querySelectorAll('.item_icon')
+          items = document.querySelectorAll('.item_desc')
+
+    console.log(itemIcons)
+     console.log(items)
+
+    itemIcons.forEach(function (itemIcon) {
+        itemIcon.addEventListener('click', function () {
+            items.style.opacity = "1";
+        })
+
+    })
+
+
+</script>
+</body>
+</html>

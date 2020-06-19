@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ds_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.armor_wrapper {
+    display: flex;
+    background-image: url("Soulofcinder.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 715px;
+}
+.armor_items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.item_container {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.item_icon {
+    width: 40px;
+    height: 40px;
+    padding:2px;
+    border-radius: 50%;
+    background: #DD4814;
+    border: 5px solid #DD4814;
+    background-clip: content-box;
+    margin:0 auto;
+}
+
+.breast {
+    transform: translate(40px, -60px);
+}
+
+.gauntlets{
+    transform: translateX(-100px);
+}
+
+.pants {
+    transform: translate(-35px, -100px);
+}
+
+.left_description, .right_description  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.item_desc {
+    opacity: 0;
+}
