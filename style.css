@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: #242516;
 }
 .armor_wrapper {
     display: flex;
@@ -27,6 +28,7 @@
     height: 25%;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .item_icon {
@@ -38,6 +40,12 @@
     border: 5px solid #DD4814;
     background-clip: content-box;
     margin:0 auto;
+}
+
+.item_icon:hover {
+    background: rgba(221,72,20,0.8);
+    background-clip: content-box;
+    border: 5px solid #DD4814;
 }
 
 .breast {

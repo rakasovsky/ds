@@ -11,62 +11,56 @@
 <body>
 <div class="ds_container">
     <div class="left_description">
-        <div class="item_desc gauntlets_desc">
+        <div class="item_desc" data-item="gauntlets">
             <img src="firelink_gauntlets.png">
         </div>
-        <div class="item_desc pants_desc">
+        <div class="item_desc" data-item="pants">
             <img src="firelink_leggings.png">
         </div>
     </div>
     <div class="armor_wrapper">
         <div class="armor_items">
             <div class="item_container">
-                <div class="item_icon helm">
+                <div class="item_icon helm" data-item="helm">
 
                 </div>
             </div>
             <div class="item_container">
-                <div class="item_icon breast">
+                <div class="item_icon breast" data-item="breast">
                     
                 </div>
             </div>
             <div class="item_container">
-                <div class="item_icon gauntlets">
+                <div class="item_icon gauntlets" data-item="gauntlets">
 
                 </div>
             </div>
-            <div class="item_container">
-                <div class="item_icon pants">
+            <div class="item_container pants">
+                <div class="item_icon" data-item="pants">
 
                 </div>
             </div>
         </div>
     </div>
     <div class="right_description">
-        <div class="item_desc helm_desc">
+        <div class="item_desc" data-item="helm">
             <img src="firelink_helm.png">
         </div>
-        <div class="item_desc breast_desc">
+        <div class="item_desc" data-item="breast">
             <img src="firelink_armor.png">
         </div>
     </div>
 </div>
 
 <script>
-    const itemIcons = document.querySelectorAll('.item_icon')
-          items = document.querySelectorAll('.item_desc')
 
-    console.log(itemIcons)
-     console.log(items)
-
-    itemIcons.forEach(function (itemIcon) {
-        itemIcon.addEventListener('click', function () {
-            items.style.opacity = "1";
-        })
-
-    })
-
-
+    document.querySelector('.ds_container').addEventListener('click', function(e) {
+        if (e.target.classList.contains('item_icon')) {
+            var itemName = e.target.getAttribute('data-item');
+            var itemDesc = document.querySelector('.item_desc[data-item="'+itemName+'"]');
+            itemDesc.style.opacity = itemDesc.style.opacity == 1 ? 0 : 1;
+        }
+    });
 </script>
 </body>
 </html>
